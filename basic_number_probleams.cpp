@@ -88,7 +88,8 @@ std::cin.tie(NULL);
  
 #endif
 //solutions1();
-cout<<find(,3,0,1,1,0);
+cout<<find(2,3,0,1,1,0);
+
 
 
 
