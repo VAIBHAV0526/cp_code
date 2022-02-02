@@ -19,7 +19,7 @@ suppose the tress follow as
 void build_tree(int a, int b, int c, int d ,int level,int stoping_level){
     int x=a+c;
     int y=b+d;
- cout<<a<<"/"<<b<<" "<<x<<"/"<<y<<" "<<c<<"/"<<d<<endl;
+ //cout<<a<<"/"<<b<<" "<<x<<"/"<<y<<" "<<c<<"/"<<d<<endl;
  if(level==stoping_level){
    return;
  }
@@ -32,7 +32,7 @@ else{
 
 
 
-void solutions (){
+void solutions1 (){
     
     int a;  // sin we  cannot take input as the number 
     int b;
@@ -48,6 +48,28 @@ build_tree(a,b,c,d,level,stoping_level);
 
     
 }
+/*probleam 2:
+Fraction Search Algorithm
+searching of fraction in the loop:
+of of above tree:
+
+*/
+string find(int x, int y, int a = 0, int b = 1, int c = 1, int d = 0) {
+    int m = a + c, n = b + d;
+    if (x == m && y == n)
+        return "";
+    if (x*n < y*m)
+        return 'L' + find(x, y, a, b, m, n);
+    else
+        return 'R' + find(x, y, m, n, c, d);
+}
+
+
+
+
+
+
+
 
 
 
@@ -65,7 +87,9 @@ std::cin.tie(NULL);
     freopen("output.txt", "w", stdout);
  
 #endif
-solutions();
+//solutions1();
+cout<<find(,3,0,1,1,0);
+
 
 
 
